@@ -30,6 +30,12 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+//CUSTOM ADDITIONS
+
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -56,7 +62,10 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,//CUSTOM STARTS NEXT
+	Code,
+	CodeBlock,
+	Strikethrough
 ];
 
 // Editor configuration.
@@ -79,7 +88,10 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',//CUSTOM STARTS NEXT
+			'code',
+			'codeBlock',
+			'strikeThrough'
 		]
 	},
 	image: {
